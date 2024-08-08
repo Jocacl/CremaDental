@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px; /* Ajusta los márgenes para evitar el desbordamiento */
+}
+
+.col-md-4 {
+    flex: 0 0 33.3333%; /* Ajusta el tamaño de la columna para que ocupen un tercio cada una */
+    max-width: 33.3333%;
+    padding: 15px; /* Ajusta el padding interno de las columnas */
+}
+
+.card1, .card2, .card3 {
+    background-image: linear-gradient(rgb(219, 222, 250), rgb(255, 255, 255), rgb(219, 222, 250));
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.imgForma1, .imgForma2, .imgForma3 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: rgb(0, 0, 0) !important;
+    font-family: "Monomaniac One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    text-align: justify;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.right1, .right2, .right3 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Pantallas grandes (hasta 1200px) */
+@media (max-width: 1200px) {
+    .col-md-4 {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+    .imgForma1, .imgForma2, .imgForma3 {
+        width: 150px;
+        height: 150px;
+    }
+    .right1, .right2, .right3 {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Pantallas medianas (hasta 992px) */
+@media (max-width: 992px) {
+    .col-md-4 {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+    .imgForma1, .imgForma2, .imgForma3 {
+        width: 120px;
+        height: 120px;
+    }
+    .right1, .right2, .right3 {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .imgForma1, .imgForma2, .imgForma3 {
+        width: 100px;
+        height: 100px;
+    }
+    .right1, .right2, .right3 {
+        width: 40px;
+        height: 40px;
+    }
+}
